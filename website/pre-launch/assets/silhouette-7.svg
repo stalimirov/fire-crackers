@@ -1,0 +1,14 @@
+<!-- Shipka: stocky broad-shouldered Bulgarian pepper — solid, planted, heavier outline feel -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 155" fill="currentColor">
+  <!-- broad stocky body -->
+  <path d="M 18 78 C 10 52 24 42 65 40 C 106 42 120 52 112 78 C 120 114 80 130 65 134 C 50 130 10 114 18 78 Z"/>
+  <!-- left arm (wide, solid) -->
+  <path d="M 22 72 C 2 62 -4 78 -2 90" stroke="currentColor" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <circle cx="-2" cy="91" r="12"/>
+  <!-- right arm -->
+  <path d="M 108 72 C 128 62 134 78 132 90" stroke="currentColor" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <circle cx="132" cy="91" r="12"/>
+  <!-- feet (planted, solid) -->
+  <ellipse cx="46"  cy="143" rx="15" ry="9"/>
+  <ellipse cx="84"  cy="143" rx="15" ry="9"/>
+</svg>

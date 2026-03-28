@@ -1,0 +1,14 @@
+<!-- Abi: small compact round pea body — noticeably smaller than others -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 120" fill="currentColor">
+  <!-- compact pea body -->
+  <ellipse cx="45" cy="50" rx="30" ry="30"/>
+  <!-- left arm (folded / precise) -->
+  <path d="M 17 52 C 4 46 0 58 2 66" stroke="currentColor" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <circle cx="2"  cy="67" r="7"/>
+  <!-- right arm -->
+  <path d="M 73 52 C 86 46 90 58 88 66" stroke="currentColor" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <circle cx="88" cy="67" r="7"/>
+  <!-- feet -->
+  <ellipse cx="33" cy="86" rx="10" ry="6"/>
+  <ellipse cx="57" cy="86" rx="10" ry="6"/>
+</svg>

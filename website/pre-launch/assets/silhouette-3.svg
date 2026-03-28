@@ -1,0 +1,14 @@
+<!-- Ha-Hank: wide, squat habanero body — much wider than tall -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 180 130" fill="currentColor">
+  <!-- wide round body -->
+  <ellipse cx="80" cy="60" rx="68" ry="52"/>
+  <!-- left arm (extends wide open) -->
+  <path d="M 16 52 C -6 44 -14 60 -12 72" stroke="currentColor" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <circle cx="-12" cy="73" r="13"/>
+  <!-- right arm -->
+  <path d="M 144 52 C 166 44 174 60 172 72" stroke="currentColor" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <circle cx="172" cy="73" r="13"/>
+  <!-- feet -->
+  <ellipse cx="54"  cy="118" rx="16" ry="9"/>
+  <ellipse cx="106" cy="118" rx="16" ry="9"/>
+</svg>

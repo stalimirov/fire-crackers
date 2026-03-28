@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:chilli-hills.com)",
+      "WebFetch(domain:www.tigre-tigre.com)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:www.facebook.com)",
+      "Bash(open:*)",
+      "WebFetch(domain:ahaplay.com)",
+      "Bash(curl -s \"https://ahaplay.com/\")",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/122.0.0.0 Safari/537.36\" \"https://ahaplay.com/\")",
+      "Bash(curl -sL \"https://ahaplay.com/assets/index-eYYLSNdL.css\")",
+      "Bash(python3 -c \":*)",
+      "WebFetch(domain:pitch.com)",
+      "WebFetch(domain:linear.app)",
+      "WebFetch(domain:basement.studio)",
+      "WebFetch(domain:www.framer.com)",
+      "WebFetch(domain:mobbin.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36\" \"https://linear.app/\")",
+      "Bash(curl -sL \"https://static.linear.app/web/_next/static/css/b06fffb47b015a3a.css\")",
+      "Bash(curl -sL \"https://static.linear.app/web/_next/static/css/1fbeb595b95c2d45.css\")",
+      "Bash(find \"/Users/stalimirov/Documents/Computer tests/Fire Crackers\" -type f -exec ls -lh {})",
+      "Bash(xargs -0 ls -lhd)",
+      "Bash(sort -k2)",
+      "Bash(while read:*)",
+      "Bash(do ls:*)",
+      "Read(//Users/stalimirov/Documents/Computer tests/Fire Crackers/**)",
+      "Bash(done)",
+      "Bash(BASE=\"/Users/stalimirov/Documents/Computer tests/Fire Crackers\")",
+      "Bash(rm \"$BASE/business-analysis.md\")",
+      "Bash(rm \"$BASE/plan-updates.md\")",
+      "Bash(rm \"$BASE/presentation/index.html.bak\")",
+      "Bash(for i:*)",
+      "Bash(sed -i '' 's/font-size:\\\\.85rem/font-size:1rem/g' \"/Users/stalimirov/Documents/Computer tests/Fire Crackers/presentation/index.html\")",
+      "Bash(sed -i '' 's/font-size:\\\\.82rem/font-size:.97rem/g' \"/Users/stalimirov/Documents/Computer tests/Fire Crackers/presentation/index.html\")",
+      "Bash(sed -i '' 's/font-size:\\\\.78rem/font-size:.93rem/g' \"/Users/stalimirov/Documents/Computer tests/Fire Crackers/presentation/index.html\")"
+    ]
+  }
+}

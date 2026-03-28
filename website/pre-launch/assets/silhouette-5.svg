@@ -1,0 +1,20 @@
+<!-- Ghost: solid upper body, vaporous wispy lower half instead of feet -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 170" fill="currentColor">
+  <!-- solid upper body -->
+  <ellipse cx="60" cy="56" rx="40" ry="42"/>
+  <!-- left arm -->
+  <path d="M 22 58 C 4 50 -2 64 2 74" stroke="currentColor" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <circle cx="2"   cy="75" r="9"/>
+  <!-- right arm -->
+  <path d="M 98 58 C 116 50 122 64 118 74" stroke="currentColor" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <circle cx="118" cy="75" r="9"/>
+  <!-- wispy vaporous base — dissipating downward -->
+  <ellipse cx="40"  cy="104" rx="23" ry="14"/>
+  <ellipse cx="80"  cy="108" rx="21" ry="12"/>
+  <ellipse cx="58"  cy="120" rx="19" ry="11"/>
+  <ellipse cx="34"  cy="132" rx="15" ry="9"/>
+  <ellipse cx="76"  cy="134" rx="13" ry="8"/>
+  <ellipse cx="52"  cy="144" rx="11" ry="7"/>
+  <ellipse cx="68"  cy="152" rx="9"  ry="6"/>
+  <ellipse cx="56"  cy="161" rx="6"  ry="5"/>
+</svg>
