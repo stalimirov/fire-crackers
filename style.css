@@ -642,3 +642,45 @@ a { color: inherit; text-decoration: none }
   body { padding-top: 48px }
   .topbar-pill { display: none }
 }
+
+/* ── Snack Gallery ──────────────────────────────────────── */
+.snack-filters { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 }
+.snack-filter {
+  padding: .4rem 1rem; border-radius: 99px; border: 1px solid var(--border-mid);
+  background: var(--bg-2); color: var(--t2); font-family: var(--ff-mono, 'DM Mono', monospace);
+  font-size: .75rem; cursor: pointer; transition: all .15s ease;
+}
+.snack-filter:hover { border-color: var(--ember-border); color: var(--ember) }
+.snack-filter.active { background: var(--ember); color: #fff; border-color: var(--ember) }
+
+.snack-gallery {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: .5rem; max-height: 520px; overflow-y: auto; padding: .5rem;
+  border: 1px solid var(--border); border-radius: 12px; background: var(--bg-3);
+}
+.snack-gallery::-webkit-scrollbar { width: 6px }
+.snack-gallery::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 3px }
+
+.snack-item {
+  display: flex; flex-direction: column; gap: .15rem;
+  padding: .6rem .8rem; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--bg-2); text-decoration: none; color: var(--t2);
+  transition: all .15s ease; font-size: .8rem; line-height: 1.4;
+}
+.snack-item:hover {
+  border-color: var(--ember-border); background: var(--ember-dim);
+  transform: translateY(-1px); box-shadow: 0 2px 8px rgba(204,34,0,.08);
+}
+.snack-item[style*="display: none"] { display: none !important }
+.snack-name { font-weight: 600; color: var(--t1); font-size: .82rem }
+.snack-origin {
+  font-family: var(--ff-mono, 'DM Mono', monospace); font-size: .65rem;
+  color: var(--ember); text-transform: uppercase; letter-spacing: .08em;
+}
+.snack-desc { font-size: .72rem; color: var(--t3); line-height: 1.35 }
+
+@media(max-width:640px) {
+  .snack-gallery { grid-template-columns: 1fr 1fr; max-height: 400px }
+  .snack-item { padding: .4rem .6rem }
+  .snack-name { font-size: .72rem }
+}
