@@ -1,0 +1,10 @@
+{
+  "name": "fire-crackers-presentation",
+  "version": "1.0.0",
+  "description": "Build system for the Fire Crackers presentation",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

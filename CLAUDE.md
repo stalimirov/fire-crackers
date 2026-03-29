@@ -1,30 +1,35 @@
-# Fire Crackers — Presentation Update
+# Fire Crackers Website — Global AI Instructions
 
-## Current Task
-Updating `presentation/index.html` based on resolved issues in `plan-updates.md`.
+This file serves as the core context for any AI assistant working on the Fire Crackers brand pitch and website.
 
-## Source of Truth
-All decisions are documented in `plan-updates.md` (13 items, all resolved). Read that file first before making any changes.
+## Project Structure & Build Process
+This repository uses a token-efficient Node.js build system to assemble the presentation.
+- `presentation/index.html` is **GENERATED**. Do not edit it directly!
+- `src/layout.html` contains the head, topbar, and shell.
+- `src/sections/` contains individual HTML chunks for each section (e.g., `01-idea.html`, `02-market.html`).
+- **To make changes**: Edit the specific `.html` file in `src/sections/`, then run the build command.
+  
+### Build Command
+```bash
+npm run build
+```
 
-## Key Changes (all prices in EUR, pack size 60g)
-- Wholesale: EUR 1.45, Bar retail: ~EUR 3.00
-- All BGN prices → EUR throughout
-- 40g → 60g throughout
+## Brand Guidelines & Tone of Voice
+- **Theme**: "The snack is real. The universe is the point." 
+- **Art Style**: Mid-Century Print Mascot meets Sailor Jerry tattoo flash. Thick black outlines, limited flat colors, halftone dots. NEVER use modern flat corporate illustration or 3D.
+- **Tone**: Unapologetic, slightly irreverent. "Made in Bulgaria. Deal with it." No generic marketing speak ("crafted with passion").
+- **Pricing & Units**: Always use **EUR (€)**. Standard pack size is **60g**.
 
-## Implementation Checklist
-Track progress here. Mark [x] when done.
+## Automated GitHub Workflow
+To quickly save your work and push to GitHub, use the provided script:
+```bash
+./bin/push.sh "Your commit message here"
+```
+This script will automatically run the build, format, commit, and push to the `main` branch.
 
-- [x] 1. Global: BGN → EUR, 40g → 60g, price updates throughout
-- [x] 2. Section 03 (Competition): Rewrite Chilli Hills row — 25+ team, franchise stores, sold-out chips at EUR 2.04-2.30. Replace dismissive moat statement.
-- [x] 3. Section 04 (Advantage): Update bar channel claims, add venue diversity
-- [x] 4. Section 08 (Content Strategy): Rewrite for static-first + Live2D pipeline, defer mini-series to Stage 2
-- [x] 5. NEW Section: "The Team" — 4 roles (3 active + 1 planned), add after Content Strategy
-- [x] 6. Section 09 (Product): Update pack size, keep SKU table but note single SKU at launch
-- [x] 7. Section 10 (Business Model): Rewrite D2C as pre-order bundles, merch as branding cost, update bar math
-- [x] 8. Section 11 (Unit Economics): New COGS table (60g, EUR), sensitivity analysis, margin ladder update
-- [x] 9. Section 12 (Revenue): Replace with 12-month cashflow projection
-- [x] 10. Section 13 (GTM): Update venue types beyond bars, sale-or-return terms, phased rollout by venue tier
-- [x] 11. Section 14 (Capital): Distributor model, reduced setup costs, contract production explanation
-- [x] 12. NEW Section: Risk Register — 6 risks with reasoning, actions, triggers
-- [x] 13. Section 15 (Next Steps): Update with revised timeline and priorities
-- [x] 14. Navigation: Update topbar and sidenav for new/reordered sections
+## Strategy & Asset Docs
+Important strategy files are located in the `docs/` folder:
+- `docs/brand_guidelines.md`
+- `docs/content_strategy.md`
+- `docs/visual_asset_brief.md`
+Review these before proposing new copy or design changes.

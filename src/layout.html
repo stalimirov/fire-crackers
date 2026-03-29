@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fire Crackers — Brand Pitch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Topbar ──────────────────────────────────────────────── -->
+<header class="topbar">
+  <span class="topbar-logo"><em>Fire</em> Crackers</span>
+  <nav class="topbar-nav">
+    <a href="#idea">The Idea</a>
+    <a href="#market">Market</a>
+    <a href="#compete">Competition</a>
+    <a href="#landscape">Landscape</a>
+    <a href="#art">Art Style</a>
+    <a href="#chars">Character</a>
+    <a href="#model">Business</a>
+    <a href="#revenue">Cashflow</a>
+    <a href="#risks">Risks</a>
+    <a href="#next">Next Steps</a>
+  </nav>
+  <span class="topbar-pill">Brand Pitch · 2026</span>
+</header>
+
+<!-- ── Grain overlay ───────────────────────────────────────── -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ── Side navigation ────────────────────────────────────── -->
+<nav class="sidenav" aria-label="Section navigation">
+  <a href="#cover"    data-label="Cover"></a>
+  <a href="#idea"     data-label="The Idea"></a>
+  <a href="#market"   data-label="Market"></a>
+  <a href="#compete"  data-label="Competition"></a>
+  <a href="#landscape"data-label="Landscape"></a>
+  <a href="#advantage"data-label="Advantage"></a>
+  <a href="#art"      data-label="Art Style"></a>
+  <a href="#brand"    data-label="Brand"></a>
+  <a href="#chars"    data-label="Characters"></a>
+  <a href="#content"  data-label="Content"></a>
+  <a href="#team"     data-label="Team"></a>
+  <a href="#product"  data-label="Product"></a>
+  <a href="#model"    data-label="Business Model"></a>
+  <a href="#economics"data-label="Unit Economics"></a>
+  <a href="#revenue"  data-label="12-Mo Cashflow"></a>
+  <a href="#gtm"      data-label="Go-to-Market"></a>
+  <a href="#capital"  data-label="Capital"></a>
+  <a href="#risks"    data-label="Risks"></a>
+  <a href="#next"     data-label="Next Steps"></a>
+</nav>
+
+<!-- INCLUDE: 00-cover.html -->
+
+<!-- INCLUDE: 01-idea.html -->
+
+<!-- INCLUDE: 02-market.html -->
+
+<!-- INCLUDE: 03-compete.html -->
+
+<!-- INCLUDE: 04-landscape.html -->
+
+<!-- INCLUDE: 05-advantage.html -->
+
+<!-- INCLUDE: 06-art.html -->
+
+<!-- INCLUDE: 07-brand.html -->
+
+<!-- INCLUDE: 08-chars.html -->
+
+<!-- INCLUDE: 09-content.html -->
+
+<!-- INCLUDE: 10-team.html -->
+
+<!-- INCLUDE: 11-product.html -->
+
+<!-- INCLUDE: 12-model.html -->
+
+<!-- INCLUDE: 13-economics.html -->
+
+<!-- INCLUDE: 14-revenue.html -->
+
+<!-- INCLUDE: 15-gtm.html -->
+
+<!-- INCLUDE: 16-capital.html -->
+
+<!-- INCLUDE: 17-risks.html -->
+
+<!-- INCLUDE: 18-next.html -->
+
+<!-- ══════════════════════════════════════════════════════════
+     LIGHTBOX
+═══════════════════════════════════════════════════════════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SCRIPT
+═══════════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ── Lightbox ─────────────────────────────────────────────── */
+const lb     = document.getElementById('lightbox');
+const lbImg  = document.getElementById('lb-img');
+const lbClose = document.getElementById('lb-close');
+
+document.querySelectorAll('#art-gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeLb() {
+  lb.classList.remove('open');
+  lbImg.src = '';
+  document.body.style.overflow = '';
+}
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+lbClose.addEventListener('click', closeLb);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+/* ── Snack gallery filters ────────────────────────────────── */
+document.querySelectorAll('.snack-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.snack-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.snack-item').forEach(item => {
+      item.style.display = (f === 'all' || item.dataset.region === f) ? '' : 'none';
+    });
+  });
+});
+
+/* ── Side nav active state ────────────────────────────────── */
+const sections = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.sidenav a');
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.sidenav a[href="#${e.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>
