@@ -22,6 +22,6 @@ git commit -m "$COMMIT_MSG" || true # Ignore if there's nothing to commit
 
 # 4. Push to remote
 echo "🚀 Pushing to origin..."
-git push origin main
+git push origin HEAD
 
 echo "✅ All done! Changes are live on GitHub."
