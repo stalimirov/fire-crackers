@@ -684,3 +684,99 @@ a { color: inherit; text-decoration: none }
   .snack-item { padding: .4rem .6rem }
   .snack-name { font-size: .72rem }
 }
+
+
+/* ── Extracted Inline Utilities ── */
+.u-sty-001 { font-size:1rem;line-height:1.8;color:var(--text-dim); }
+.u-sty-002 { flex-direction:column;gap:1.25rem;margin:0; }
+.u-sty-003 { color:inherit; }
+.u-sty-004 { align-items:start; }
+.u-sty-005 { color:var(--fire-red); }
+.u-sty-006 { text-align:right; }
+.u-sty-007 { color:var(--ember); }
+.u-sty-008 { color:var(--wax-gold); }
+.u-sty-009 { display:flex;flex-direction:column;gap:1.5rem; }
+.u-sty-010 { font-size:1rem;line-height:1.7; }
+.u-sty-011 { list-style:none;font-size:1rem;line-height:2.1; }
+.u-sty-012 { margin-top:1rem; }
+.u-sty-013 { text-align:center; }
+.u-sty-014 { font-size:1.5rem; }
+.u-sty-015 { font-size:.9rem;opacity:.75; }
+.u-sty-016 { font-family:var(--ff-h);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1rem; }
+.u-sty-017 { color:inherit;text-decoration:underline;text-underline-offset:3px; }
+.u-sty-018 { color:var(--ember);text-decoration:underline;text-underline-offset:3px; }
+.u-sty-019 { color:var(--wasabi); }
+.u-sty-020 { margin-top:1.5rem; }
+.u-sty-021 { color:var(--cream); }
+.u-sty-022 { margin-top:2.5rem; }
+.u-sty-023 { font-family:var(--ff-h);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin:1.5rem 0 1rem; }
+.u-sty-024 { max-width:52rem; }
+.u-sty-025 { display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0; }
+.u-sty-026 { margin-top:2rem; }
+.u-sty-027 { align-items:start;margin-bottom:2rem; }
+.u-sty-028 { display:flex;flex-direction:column;gap:1rem; }
+.u-sty-029 { list-style:none;font-size:1rem;line-height:2.2; }
+.u-sty-030 { background:rgba(204,34,0,.07);border-color:rgba(204,34,0,.25); }
+.u-sty-031 { font-family:var(--ff-h);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:.5rem; }
+.u-sty-032 { background:#1C1410; }
+.u-sty-033 { background:#CC2200; }
+.u-sty-034 { background:#C4956A; }
+.u-sty-035 { background:#F2E4C4; }
+.u-sty-036 { background:#E8621A; }
+.u-sty-037 { background:#C9933A; }
+.u-sty-038 { background:#7A6E5F; }
+.u-sty-039 { background:#E8EBE4;border-color:rgba(255,255,255,.3); }
+.u-sty-040 { background:#2D5016; }
+.u-sty-041 { --ht-c:#E8621A; }
+.u-sty-042 { --ht-c:#CC2200; }
+.u-sty-043 { --ht-c:#991100; }
+.u-sty-044 { --ht-c:#5C0A00; }
+.u-sty-045 { --ht-c:#1C1410;border-left-color:#CC2200; }
+.u-sty-046 { align-items:start;margin-top:2rem; }
+.u-sty-047 { font-family:var(--ff-h);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim); }
+.u-sty-048 { font-family:var(--ff-d);font-size:1.4rem;color:var(--cream);text-transform:uppercase;margin:.3rem 0 .6rem; }
+.u-sty-049 { font-size:1rem;color:var(--text-dim);line-height:1.6;margin-bottom:1rem; }
+.u-sty-050 { margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08); }
+.u-sty-051 { font-family:var(--ff-d);font-size:1.1rem;color:var(--cream);text-transform:uppercase;margin:.3rem 0 .4rem; }
+.u-sty-052 { font-size:1rem;color:var(--text-dim);line-height:1.6; }
+.u-sty-053 { font-size:1rem;line-height:1.8;color:var(--text-dim);margin-bottom:1.5rem; }
+.u-sty-054 { grid-template-columns:repeat(4,1fr); }
+.u-sty-055 { font-size:1rem; }
+.u-sty-056 { font-size:1rem;color:var(--text-dim);line-height:1.6;margin-top:.75rem; }
+.u-sty-057 { margin-top:.75rem;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--wasabi); }
+.u-sty-058 { opacity:.6; }
+.u-sty-059 { margin-top:.75rem;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ember); }
+.u-sty-060 { font-size:.9rem;line-height:1.7; }
+.u-sty-061 { background:rgba(204,34,0,.08); }
+.u-sty-062 { font-size:1rem;line-height:1.7;color:var(--text-dim); }
+.u-sty-063 { color:var(--text-dim);font-size:.85em; }
+.u-sty-064 { list-style:none;font-size:.97rem;line-height:2; }
+.u-sty-065 { font-family:var(--ff-h);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1.5rem; }
+.u-sty-066 { font-size:.93rem;color:var(--text-dim);margin-top:.75rem; }
+.u-sty-067 { width:45%;background:rgba(232,98,26,.4);color:var(--cream); }
+.u-sty-068 { width:52%;background:rgba(232,98,26,.6);color:var(--cream); }
+.u-sty-069 { width:62%;background:rgba(232,98,26,.8);color:var(--cream); }
+.u-sty-070 { width:57%;background:var(--ember);color:var(--char-black); }
+.u-sty-071 { margin-bottom:1rem; }
+.u-sty-072 { font-size:.97rem;color:var(--text-dim);line-height:1.6;margin-bottom:2rem; }
+.u-sty-073 { overflow-x:auto; }
+.u-sty-074 { width:100%;font-size:.93rem; }
+.u-sty-075 { font-size:1.2rem; }
+.u-sty-076 { font-size:.9rem;line-height:1.8; }
+.u-sty-077 { font-family:var(--ff-h);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin:2.5rem 0 1rem; }
+.u-sty-078 { font-family:var(--ff-h);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin:1.5rem 0 .75rem; }
+.u-sty-079 { background:var(--ember-dim);border:1px solid var(--ember-border);border-radius:8px;padding:1rem 1.25rem;margin:1rem 0 1.5rem;display:flex;justify-content:space-between;align-items:center; }
+.u-sty-080 { color:var(--t1); }
+.u-sty-081 { color:var(--ember);font-size:1.15rem; }
+.u-sty-082 { margin-top:1.5rem;background:rgba(42,92,16,.08);border-color:rgba(42,92,16,.25); }
+.u-sty-083 { font-size:1rem;line-height:1.6;color:var(--text-dim);margin-top:.75rem; }
+.u-sty-084 { margin-bottom:1.5rem; }
+.u-sty-085 { color:var(--ember);font-size:.8em; }
+.u-sty-086 { font-size:.93rem;color:var(--text-dim);margin-top:.75rem;line-height:1.6; }
+.u-sty-087 { grid-template-columns:repeat(2,1fr); }
+.u-sty-088 { color:var(--fire-red);font-size:.95rem; }
+.u-sty-089 { font-size:.97rem;color:var(--text-dim);line-height:1.6;margin:.5rem 0; }
+.u-sty-090 { font-size:.97rem;line-height:1.6;margin:.5rem 0; }
+.u-sty-091 { font-size:.93rem;color:var(--ember);margin-top:.5rem; }
+.u-sty-092 { font-size:.9rem;line-height:1.75;margin-bottom:1rem; }
+.u-sty-093 { font-size:1rem;color:var(--text-dim);line-height:1.7;margin-bottom:1.25rem; }
