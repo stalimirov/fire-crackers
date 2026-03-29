@@ -1,100 +1,232 @@
+<style>
+  .recipe-flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 280px;
+    perspective: 1000px;
+  }
+  .recipe-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+  .recipe-flip-card:hover .recipe-flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .recipe-flip-card-front, .recipe-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+  }
+  .recipe-flip-card-front {
+    background: #000;
+  }
+  .recipe-flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .recipe-flip-card:hover .recipe-flip-card-front img {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+  .recipe-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1rem 1rem 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: #fff;
+    text-align: left;
+  }
+  .recipe-title-overlay h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1em;
+    font-family: var(--f-heading);
+    color: #FFF;
+    line-height: 1.2;
+  }
+  .recipe-title-overlay span {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffd700;
+  }
+  .recipe-flip-card-back {
+    background: var(--c-surface);
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+  .recipe-flip-card-back h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--c-accent);
+    font-size: 1.1em;
+    border-bottom: 1px solid var(--c-border);
+    padding-bottom: 0.5rem;
+  }
+  .recipe-flip-card-back p {
+    margin: 0 0 0.6rem 0;
+    font-size: 0.85em;
+    color: var(--c-text);
+    line-height: 1.4;
+  }
+  .recipe-flip-card-back strong {
+    color: var(--c-text-mut);
+    font-weight: 600;
+    margin-right: 0.25rem;
+  }
+</style>
+
 <section id="recipe">
   <div class="container container-md">
     <div class="text-center u-mb-031">
       <h2 class="u-sty-011">The Recipe & Formulation</h2>
-      <p class="u-sty-023">Zero-waste production built on modern ingredients and bold innovation.</p>
+      <p class="u-sty-023">Hover over the tiles to reveal the core concepts.</p>
     </div>
     
     <div class="moat u-sty-026">
-      <h3 class="u-sty-024 u-mb-020">Manufacturing the "Grid Snap"</h3>
-      <p class="u-sty-022 u-mb-031">
-        To streamline production and keep it replicable in any conventional bakery kitchen, we bypass complex extrusion and opt for a <strong>Sheeted "Grid-Cut" Cracker</strong>. Dough is rolled to a 1/16" thickness, docked to ensure an even bake, and rotary-cut into flush squares. This yields a massive crunch with <strong>0% dough-webbing waste</strong>.
-      </p>
-
       <div class="u-grid-cols u-grid-cols-3 u-gap-030 u-mb-031">
         
         <!-- Recipe Idea 1 -->
-        <div class="recipe-card p-4 rounded-xl shadow-lg border border-gray-100" style="background: var(--c-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--c-border); display: flex; flex-direction: column;">
-          <img src="img/recipe_seed.png" alt="Seed Inferno" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; aspect-ratio: 1/1; object-fit: cover; border: 1px solid rgba(0,0,0,0.1);">
-          <h4 class="u-sty-021" style="color: var(--c-accent); margin-bottom: 0.25rem;">The Seed Inferno</h4>
-          <p class="u-sty-025" style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: var(--c-text-mut);">Gluten-Free / High Protein</p>
-          <hr style="border-top: 1px solid var(--c-border); margin: 1rem 0;">
-          <ul class="u-sty-022" style="font-size: 0.85em; padding-left: 1.25rem; margin-bottom: 0; flex-grow: 1;">
-            <li><strong>Base:</strong> Bio raw seeds (pumpkin, sesame).</li>
-            <li><strong>Spice:</strong> Nutritional yeast & cayenne flakes.</li>
-            <li><strong>Texture:</strong> Granular, flourless crunch.</li>
-          </ul>
+        <div class="recipe-flip-card" tabindex="0">
+          <div class="recipe-flip-card-inner">
+            <div class="recipe-flip-card-front">
+              <img src="img/recipe_seed.png" alt="Seed Inferno">
+              <div class="recipe-title-overlay">
+                <h4>The Seed Inferno</h4>
+                <span>Gluten-Free / High Protein</span>
+              </div>
+            </div>
+            <div class="recipe-flip-card-back">
+              <h4>The Seed Inferno</h4>
+              <p><strong>Base:</strong> Bio raw seeds like pumpkin and sesame.</p>
+              <p><strong>Spice:</strong> Nutritional yeast combined with intense cayenne flakes.</p>
+              <p><strong>Texture:</strong> Granular, ultra-crunchy, distinct flourless snap.</p>
+              <p><strong>Method:</strong> Hydrated ground flaxseed acts as the natural hydrocolloid binder.</p>
+            </div>
+          </div>
         </div>
         
         <!-- Recipe Idea 2 -->
-        <div class="recipe-card p-4 rounded-xl shadow-lg border border-gray-100" style="background: var(--c-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--c-border); display: flex; flex-direction: column;">
-          <img src="img/recipe_cassava.png" alt="Cassava Masa Crisp" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; aspect-ratio: 1/1; object-fit: cover; border: 1px solid rgba(0,0,0,0.1);">
-          <h4 class="u-sty-021" style="color: var(--c-accent); margin-bottom: 0.25rem;">Cassava & Masa Crisp</h4>
-          <p class="u-sty-025" style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: var(--c-text-mut);">Grain-Free Traditional Snap</p>
-          <hr style="border-top: 1px solid var(--c-border); margin: 1rem 0;">
-          <ul class="u-sty-022" style="font-size: 0.85em; padding-left: 1.25rem; margin-bottom: 0; flex-grow: 1;">
-            <li><strong>Base:</strong> Organic Cassava and artisan masa.</li>
-            <li><strong>Spice:</strong> Fresh minced jalapeños inside dough.</li>
-            <li><strong>Texture:</strong> Clean, traditional snap.</li>
-          </ul>
+        <div class="recipe-flip-card" tabindex="0">
+          <div class="recipe-flip-card-inner">
+            <div class="recipe-flip-card-front">
+              <img src="img/recipe_cassava.png" alt="Cassava Masa Crisp">
+              <div class="recipe-title-overlay">
+                <h4>Cassava Masa Crisp</h4>
+                <span>Grain-Free Traditional Snap</span>
+              </div>
+            </div>
+            <div class="recipe-flip-card-back">
+              <h4>Cassava Masa Crisp</h4>
+              <p><strong>Base:</strong> Organic Cassava blended seamlessly with artisan corn masa.</p>
+              <p><strong>Spice:</strong> Fresh minced jalapeños folded directly into the dough matrix.</p>
+              <p><strong>Texture:</strong> A clean, undeniably familiar traditional cracker snap.</p>
+              <p><strong>Method:</strong> Sheeted perfectly flat and rotary-cut for absolutely 0% webbing waste.</p>
+            </div>
+          </div>
         </div>
 
         <!-- Recipe Idea 3 -->
-        <div class="recipe-card p-4 rounded-xl shadow-lg border border-gray-100" style="background: var(--c-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--c-border); display: flex; flex-direction: column;">
-          <img src="img/recipe_almond.png" alt="Smoked Almond Fire" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; aspect-ratio: 1/1; object-fit: cover; border: 1px solid rgba(0,0,0,0.1);">
-          <h4 class="u-sty-021" style="color: var(--c-accent); margin-bottom: 0.25rem;">Smoked Almond Fire</h4>
-          <p class="u-sty-025" style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: var(--c-text-mut);">Low-Carb / Keto Friendly</p>
-          <hr style="border-top: 1px solid var(--c-border); margin: 1rem 0;">
-          <ul class="u-sty-022" style="font-size: 0.85em; padding-left: 1.25rem; margin-bottom: 0; flex-grow: 1;">
-            <li><strong>Base:</strong> Fine bio almond flour.</li>
-            <li><strong>Spice:</strong> Deep chipotle & smoked paprika.</li>
-            <li><strong>Texture:</strong> Rich, crumbly shortbread bite.</li>
-          </ul>
+        <div class="recipe-flip-card" tabindex="0">
+          <div class="recipe-flip-card-inner">
+            <div class="recipe-flip-card-front">
+              <img src="img/recipe_almond.png" alt="Smoked Almond Fire">
+              <div class="recipe-title-overlay">
+                <h4>Smoked Almond Fire</h4>
+                <span>Low-Carb / Keto Friendly</span>
+              </div>
+            </div>
+            <div class="recipe-flip-card-back">
+              <h4>Smoked Almond Fire</h4>
+              <p><strong>Base:</strong> Exceptionally fine bio almond flour.</p>
+              <p><strong>Spice:</strong> Deep chipotle, smoked paprika, garlic, and savory onion notes.</p>
+              <p><strong>Texture:</strong> A rich, crumbly shortbread bite that practically melts.</p>
+              <p><strong>Method:</strong> Fast assembly; briefly baked to capture a rigid structure upon cooling.</p>
+            </div>
+          </div>
         </div>
 
         <!-- Recipe Idea 4 -->
-        <div class="recipe-card p-4 rounded-xl shadow-lg border border-gray-100" style="background: var(--c-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--c-border); display: flex; flex-direction: column;">
-          <img src="img/recipe_sourdough.png" alt="Sourdough Fire" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; aspect-ratio: 1/1; object-fit: cover; border: 1px solid rgba(0,0,0,0.1);">
-          <h4 class="u-sty-021" style="color: var(--c-accent); margin-bottom: 0.25rem;">Sourdough Wheat Fire</h4>
-          <p class="u-sty-025" style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: var(--c-text-mut);">Traditional Artisanal Bake</p>
-          <hr style="border-top: 1px solid var(--c-border); margin: 1rem 0;">
-          <ul class="u-sty-022" style="font-size: 0.85em; padding-left: 1.25rem; margin-bottom: 0; flex-grow: 1;">
-            <li><strong>Base:</strong> Wheat flour + sourdough discard.</li>
-            <li><strong>Spice:</strong> Red pepper flakes & crack black pepper.</li>
-            <li><strong>Texture:</strong> Super bubbly, fermented tang.</li>
-          </ul>
+        <div class="recipe-flip-card" tabindex="0">
+          <div class="recipe-flip-card-inner">
+            <div class="recipe-flip-card-front">
+              <img src="img/recipe_sourdough.png" alt="Sourdough Fire">
+              <div class="recipe-title-overlay">
+                <h4>Sourdough Wheat Fire</h4>
+                <span>Traditional Artisanal Bake</span>
+              </div>
+            </div>
+            <div class="recipe-flip-card-back">
+              <h4>Sourdough Wheat Fire</h4>
+              <p><strong>Base:</strong> Whole wheat flour enriched with active sourdough discard.</p>
+              <p><strong>Spice:</strong> A heavy hand of red pepper flakes and crushed black pepper.</p>
+              <p><strong>Texture:</strong> Strikingly bubbly and airy with a deep, fermented tang.</p>
+              <p><strong>Method:</strong> Rolled to an ultra-thin 1/16" thickness for a massive audible crunch.</p>
+            </div>
+          </div>
         </div>
 
         <!-- Recipe Idea 5 -->
-        <div class="recipe-card p-4 rounded-xl shadow-lg border border-gray-100" style="background: var(--c-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--c-border); display: flex; flex-direction: column;">
-          <img src="img/recipe_cheddar.png" alt="Cheddar Jalapeno" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; aspect-ratio: 1/1; object-fit: cover; border: 1px solid rgba(0,0,0,0.1);">
-          <h4 class="u-sty-021" style="color: var(--c-accent); margin-bottom: 0.25rem;">Sharp Cheddar Jalapeño</h4>
-          <p class="u-sty-025" style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: var(--c-text-mut);">Classic Savory Comfort</p>
-          <hr style="border-top: 1px solid var(--c-border); margin: 1rem 0;">
-          <ul class="u-sty-022" style="font-size: 0.85em; padding-left: 1.25rem; margin-bottom: 0; flex-grow: 1;">
-            <li><strong>Base:</strong> Wheat flour and butter.</li>
-            <li><strong>Spice:</strong> Real aged cheddar & fresh jalapeños.</li>
-            <li><strong>Texture:</strong> Hard cheese snap.</li>
-          </ul>
+        <div class="recipe-flip-card" tabindex="0">
+          <div class="recipe-flip-card-inner">
+            <div class="recipe-flip-card-front">
+              <img src="img/recipe_cheddar.png" alt="Sharp Cheddar Jalapeño">
+              <div class="recipe-title-overlay">
+                <h4>Sharp Cheddar Jalapeño</h4>
+                <span>Classic Savory Comfort</span>
+              </div>
+            </div>
+            <div class="recipe-flip-card-back">
+              <h4>Sharp Cheddar Jalapeño</h4>
+              <p><strong>Base:</strong> Sheeted wheat flour bonded with high-quality butter.</p>
+              <p><strong>Spice:</strong> Genuine aged sharp cheddar baked alongside real jalapeño chunks.</p>
+              <p><strong>Texture:</strong> A satisfying, nostalgic hard-cheese snap.</p>
+              <p><strong>Method:</strong> Baked at tightly monitored temps to avoid browning the delicate cheese fats.</p>
+            </div>
+          </div>
         </div>
 
         <!-- Recipe Idea 6 -->
-        <div class="recipe-card p-4 rounded-xl shadow-lg border border-gray-100" style="background: var(--c-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--c-border); display: flex; flex-direction: column;">
-          <img src="img/recipe_popping.png" alt="Firecracker Pop" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; aspect-ratio: 1/1; object-fit: cover; border: 1px solid rgba(0,0,0,0.1);">
-          <h4 class="u-sty-021" style="color: var(--c-accent); margin-bottom: 0.25rem;">The Firecracker Pop</h4>
-          <p class="u-sty-025" style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: var(--c-text-mut);">Experiential / Viral Variant</p>
-          <hr style="border-top: 1px solid var(--c-border); margin: 1rem 0;">
-          <ul class="u-sty-022" style="font-size: 0.85em; padding-left: 1.25rem; margin-bottom: 0; flex-grow: 1;">
-            <li><strong>Technique:</strong> Cracker brushed with chili oil post-bake.</li>
-            <li><strong>Spice:</strong> Neutral unflavored <em>popping candy</em> + chili mix.</li>
-            <li><strong>Texture:</strong> Sizzles and physically pops on the tongue.</li>
-          </ul>
+        <div class="recipe-flip-card" tabindex="0">
+          <div class="recipe-flip-card-inner">
+            <div class="recipe-flip-card-front">
+              <img src="img/recipe_popping.png" alt="The Firecracker Pop">
+              <div class="recipe-title-overlay">
+                <h4>The Firecracker Pop</h4>
+                <span>Experiential / Viral Variant</span>
+              </div>
+            </div>
+            <div class="recipe-flip-card-back">
+              <h4>The Firecracker Pop</h4>
+              <p><strong>Base:</strong> A structurally sound, completely neutral wheat or wafer cracker.</p>
+              <p><strong>Spice:</strong> Unflavored neutral popping candy blended perfectly into chili dust.</p>
+              <p><strong>Texture:</strong> Intensely dynamic; it violently pops and fizzles directly on the tongue.</p>
+              <p><strong>Method:</strong> The candy is applied post-bake over a glossy chili-oil wash to prevent melting.</p>
+            </div>
+          </div>
         </div>
 
       </div>
 
       <p class="u-sty-021 text-center">
-        <em>Whether rooting in traditional bio grains or executing wild experiential formulations like the Popping Candy snap, the underlying sheeted grid scales easily inside conventional bakeries.</em>
+        <em>These profiles elevate Fire Crackers from a standard bar snack into a premium, experiential staple.</em>
       </p>
 
     </div>
