@@ -36,7 +36,8 @@
       "Bash(sed -i '' 's/font-size:\\\\.85rem/font-size:1rem/g' \"/Users/stalimirov/Documents/Computer tests/Fire Crackers/presentation/index.html\")",
       "Bash(sed -i '' 's/font-size:\\\\.82rem/font-size:.97rem/g' \"/Users/stalimirov/Documents/Computer tests/Fire Crackers/presentation/index.html\")",
       "Bash(sed -i '' 's/font-size:\\\\.78rem/font-size:.93rem/g' \"/Users/stalimirov/Documents/Computer tests/Fire Crackers/presentation/index.html\")",
-      "WebFetch(domain:www.cbi.eu)"
+      "WebFetch(domain:www.cbi.eu)",
+      "WebFetch(domain:www.osem-nestle.co.il)"
     ]
   }
 }
