@@ -21,7 +21,11 @@ echo "📝 Committing with message: '$COMMIT_MSG'"
 git commit -m "$COMMIT_MSG" || true # Ignore if there's nothing to commit
 
 # 4. Push to remote
-echo "🚀 Pushing to origin..."
+echo "🚀 Pushing source code to origin main..."
 git push origin HEAD
 
-echo "✅ All done! Changes are live on GitHub."
+# 5. Deploy to GitHub Pages
+echo "🌐 Deploying presentation to GitHub Pages..."
+npm run deploy
+
+echo "✅ All done! Changes are live on GitHub & GitHub Pages!"

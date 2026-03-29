@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "Build system for the Fire Crackers presentation",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "deploy": "gh-pages -d presentation"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
