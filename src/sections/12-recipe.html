@@ -1,3 +1,4 @@
+<style>
   .recipe-flip-card {
     background-color: transparent;
     width: 100%;
@@ -11,7 +12,9 @@
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
   }
-  .recipe-flip-card:hover .recipe-flip-card-inner {
+  .recipe-flip-card:hover .recipe-flip-card-inner,
+  .recipe-flip-card:focus .recipe-flip-card-inner,
+  .recipe-flip-card:focus-within .recipe-flip-card-inner {
     transform: rotateY(180deg);
   }
   .recipe-flip-card-front, .recipe-flip-card-back {
@@ -92,14 +95,17 @@
   }
 </style>
 
-<section id="recipe">
-  <div class="container container-md">
-      <p class="u-sty-022 u-mb-031 text-center">
+<section id="recipe" class="section">
+  <div class="inner">
+      <span class="label">12 — Recipe</span>
+      <h2 class="title">Bypassing complex extrusion.<br>Maximizing massive crunch.</h2>
+
+      <p class="lead" style="max-width: 800px; margin-bottom: 3rem;">
         To streamline production and keep it replicable in any conventional bakery kitchen, we bypass complex extrusion and opt for a <strong>Sheeted "Grid-Cut" Cracker</strong>. Dough is rolled to a 1/16" thickness, docked to ensure an even bake, and rotary-cut into flush squares. This yields a massive crunch with <strong>0% dough-webbing waste</strong>.
       </p>
 
-      <div style="max-width: 650px; margin: 0 auto;">
-        <div class="u-grid-cols u-grid-cols-2 u-gap-030 u-mb-031">
+      <div>
+        <div class="g3" style="width: 100%;">
         
         <!-- Recipe Idea 1 -->
         <div class="recipe-flip-card" tabindex="0">
